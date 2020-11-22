@@ -1,0 +1,31 @@
+{
+  "name": "skat_bowling",
+  "version": "1.0.0",
+  "description": "Bowling score calculator",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.21.0"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.6.2",
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
+    "eslint": "^7.13.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-vue": "^7.1.0",
+    "jasmine": "^3.6.3",
+    "nyc": "^15.1.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.1.2"
+  },
+  "scripts": {
+    "start": "node out/src/index.js",
+    "prestart": "npm run build",
+    "build": "tsc",
+    "test": "ts-node node_modules/jasmine/bin/jasmine --config=jasmine.json",
+
+    "coverage": "nyc -r text -e .ts -x \"tests/*.test.ts\" npm run test"
+  },
+  "author": "Rasmus B. Nilsson",
+  "license": "ISC"
+}
